@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Plugin couleur hexadécimale</title>
+<meta name="keywords" content="Plugin javascript couleur hexadécimale, hexadecimal color javascript plugin, javascript, color, plugin, hexadecimal, hex color, hex, colors, couleur, hexadécimale, couleurs, hexadécimales, Agence Posca'fé, Posca'fé">
+<meta name="description" content="Plugin javascript de couleurs hexadécimales réalisé par l'agence Posca'fé">
+</head>
+
+<style type="text/css">
+#colorchoice {
+  width: 45%;
+  margin-left: 27.5%;
+  background-color: #fff;
+  border-radius: 10px 10px 10px 0px;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  box-shadow: 0px 3px 5px #909090;
+}
+
+table {
+  text-align: center;
+  width: 100%;
+}
+
+
+#colorchoice table tr td p {
+ font-family: arial;
+ color: #909090;
+}
+
+#colorchoice table tr td input {
+  background-color: #f3f3f3;
+  border-radius: 2px 2px 2px 2px;
+}
+
+.validate {
+  margin-left: 40%;
+  width: 20%;
+}
+
+.valider {
+  width: 100%;
+  color: #e9c426;
+}
+
+#Answer {
+  width: 45%;
+  margin-left: 27.5%;
+  background-color: #fff;
+  border-radius: 10px 10px 10px 0px;
+  padding-top: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+  box-shadow: 0px 3px 5px #909090;
+}
+
+#Answer p {
+  text-align: center;
+ font-family: arial;
+ color: #909090;
+}
+</style>
+
+<div id="colorchoice">
+<table>
+<tr>
+<td>
+<p>&#9996; Code Color Hexadecimal</p></td>
+<td><input type="color" name="color" id="color"/></td>
+</tr>
+</table>
+<div class="validate"><input type="submit" value="&#10003;" class="valider"  id="valider" name="valider" onclick="color()" /></div>
+</div>
+
+<br/><br/>
+
+<div id="Answer">
+<p id="reponse">&#9996; Le code hexadecimal est &#9996;<br/><span></span></p>
+</div>
+
+<script>
+function color(print) {
+
+var last, check, proceed = true;
+
+if (proceed = true) {
+var result = document.getElementById("color").value;
+check = document.getElementById("reponse");
+last = check.lastChild;
+print = last.innerHTML = '<strong style="color: ' + result + ';">' + result + '</strong>';
+} else {
+proceed = false;
+}
+}
+</script>
